@@ -1,0 +1,10 @@
+// app/routes/home.js
+//removendo a declaração do controller por conta do express-load
+//var controller = require('../controllers/home')();
+
+module.exports = function(app) {
+	//app.get('/index',controller.index);
+	//Inserindo variável do controller
+	var controller = app.controllers.home;
+	app.get('/',controller.index);
+}
